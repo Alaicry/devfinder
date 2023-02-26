@@ -16,7 +16,7 @@ const Search: React.FC<SearchProps> = ({ hasError, onSubmitForm }) => {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement & FormFiels>) => {
 		event.preventDefault();
 		const searchText = event.currentTarget.username.value;
-		if (searchText) {
+		if (searchText.trim()) {
 			onSubmitForm(searchText);
 			event.currentTarget.reset();
 		}
