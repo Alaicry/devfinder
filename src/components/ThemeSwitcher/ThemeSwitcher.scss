@@ -1,4 +1,4 @@
-:global {
+:root {
 	body[data-theme="light"] {
 		--switcher-color: var(--gray-100);
 		--switcher-color-hovered: var(--gray-300);
@@ -9,26 +9,28 @@
 	}
 }
 
-.switcher {
+.theme-switcher {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	cursor: pointer;
-	.text {
+	&__text {
 		color: var(--switcher-color);
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 2.5px;
 	}
-	.icon {
+	&__icon {
 		fill: var(--switcher-color);
 	}
 	&:hover {
-		.text {
-			color: var(--switcher-color-hovered);
-		}
-		.icon {
-			fill: var(--switcher-color-hovered);
+		.theme-switcher {
+			&__text {
+				color: var(--switcher-color-hovered);
+			}
+			&__icon {
+				fill: var(--switcher-color-hovered);
+			}
 		}
 	}
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "./components/Container";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import UserCard from "./components/UserCard";
@@ -23,11 +22,11 @@ const App = () => {
 	};
 
 	return (
-		<Container>
+		<React.Fragment>
 			<Header />
 			<Search hasError={!user} onSubmitForm={fetchUser} />
 			{user && <UserCard {...user} />}
-		</Container>
+		</React.Fragment>
 	);
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ThemeSwitcher.module.scss";
+import "./ThemeSwitcher.scss";
 import { ReactComponent as SunIcon } from "../../assets/icon-sun.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icon-moon.svg";
 import { useLocaleStorage } from "../../utils/hooks/useLocalStorage";
@@ -18,12 +18,12 @@ const ThemeSwitcher: React.FC = () => {
 	}, [theme]);
 
 	return (
-		<div className={styles.switcher} onClick={toggleTheme}>
-			<span className={styles.text}>{theme}</span>
+		<div className="theme-switcher" onClick={toggleTheme}>
+			<span className="theme-switcher__text">{theme}</span>
 			{theme === "light" ? (
-				<SunIcon className={styles.icon} />
+				<SunIcon className="theme-switcher__icon" />
 			) : (
-				<MoonIcon className={styles.icon} />
+				<MoonIcon className="theme-switcher__icon" />
 			)}
 		</div>
 	);

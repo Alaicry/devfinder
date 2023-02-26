@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./Header.module.scss";
+import "./Header.scss";
 import ThemeSwitcher from "../ThemeSwitcher";
-import Button from "../Button";
 
 const Header: React.FC = () => {
 	return (
-		<header className={styles.header}>
-			<div className={styles.logo}>devfinder</div>
+		<header className="header">
+			<div className="logo">devfinder</div>
 			<ThemeSwitcher />
 		</header>
 	);
