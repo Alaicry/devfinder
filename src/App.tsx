@@ -1,14 +1,13 @@
 import React from "react";
-import Container from "./components/Container/Container";
-import Header from "./components/Header/Header";
-import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import Search from "./components/Search";
 
-type Props = {};
-
-const App = (props: Props) => {
+const App = () => {
 	return (
 		<Container>
 			<Header />
+			<Search hasError onSubmitForm={() => {}} />
 		</Container>
 	);
 };
