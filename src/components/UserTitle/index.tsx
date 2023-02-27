@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./UserTitle.module.scss";
+import "./UserTitle.scss";
 import { LocalGithubUser } from "../../types";
 
 interface UserTitleProps extends Pick<LocalGithubUser, "name" | "login" | "created"> {}
@@ -13,10 +13,10 @@ const localDate = new Intl.DateTimeFormat("en-GB", {
 const UserTitle: React.FC<UserTitleProps> = ({ name, created, login }) => {
 	const joinedDate = localDate.format(new Date(created));
 	return (
-		<div className={styles.userTitle}>
-			<h2>{name}</h2>
-			<h3>{login}</h3>
-			<span>{joinedDate}</span>
+		<div className="user-title">
+			<h2 className="user-title__name">{name}</h2>
+			<h3 className="user-title__login">{login}</h3>
+			<span className="user-title__date">{joinedDate}</span>
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./UserInfo.module.scss";
+import "./UserInfo.scss";
 import { LocalGithubUser } from "../../types";
 import InfoItem, { InfoItemProps } from "../InfoItem";
 import { ReactComponent as CompanyIcon } from "../../assets/icon-company.svg";
@@ -12,14 +12,14 @@ interface UserInfoProps
 
 const UserInfo: React.FC<UserInfoProps> = ({ blog, company, location, twitter }) => {
 	const items: InfoItemProps[] = [
-		{ icon: <LocationIcon />, text: location },
-		{ icon: <WebsiteIcon />, text: blog, isLink: true },
-		{ icon: <TwitterIcon />, text: twitter },
-		{ icon: <CompanyIcon />, text: company },
+		{ icon: <LocationIcon className="icon" />, text: location },
+		{ icon: <WebsiteIcon className="icon" />, text: blog, isLink: true },
+		{ icon: <TwitterIcon className="icon" />, text: twitter },
+		{ icon: <CompanyIcon className="icon" />, text: company },
 	];
 
 	return (
-		<div className={styles.userInfo}>
+		<div className="user-info">
 			{items.map((item, index) => (
 				<InfoItem {...item} key={index} />
 			))}

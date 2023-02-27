@@ -1,0 +1,32 @@
+:root {
+	body[data-theme="light"] {
+		--info-color: var(--gray-200);
+	}
+
+	body[data-theme="dark"] {
+		--info-color: var(--white);
+	}
+}
+
+.info-item {
+	color: var(--info-color);
+	font-size: 0.75rem;
+	line-height: 1.5;
+	display: flex;
+	align-items: center;
+
+	svg {
+		fill: var(--info-color);
+		margin-right: 1rem;
+		width: 20px;
+	}
+}
+
+.link {
+	text-decoration: none;
+	color: var(--info-color);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

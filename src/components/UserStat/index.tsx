@@ -1,23 +1,23 @@
 import React from "react";
-import styles from "./UserStat.module.scss";
+import "./UserStat.scss";
 import { LocalGithubUser } from "../../types";
 
 export interface UserStatProps extends Pick<LocalGithubUser, "repos" | "followers" | "following"> {}
 
 const UserStat: React.FC<UserStatProps> = ({ repos, followers, following }) => {
 	return (
-		<div className={styles.userStat}>
-			<div className={styles.info}>
-				<div className={styles.infoTitle}>Repos</div>
-				<div className={styles.infoNumber}>{repos}</div>
+		<div className="card-stats">
+			<div className="stat">
+				<div className="stat__title">Repos</div>
+				<div className="stat__number">{repos}</div>
 			</div>
-			<div className={styles.info}>
-				<div className={styles.infoTitle}>Following</div>
-				<div className={styles.infoNumber}>{following}</div>
+			<div className="stat">
+				<div className="stat__title">Following</div>
+				<div className="stat__number">{following}</div>
 			</div>
-			<div className={styles.info}>
-				<div className={styles.infoTitle}>Followers</div>
-				<div className={styles.infoNumber}>{followers}</div>
+			<div className="stat">
+				<div className="stat__title">Followers</div>
+				<div className="stat__number">{followers}</div>
 			</div>
 		</div>
 	);

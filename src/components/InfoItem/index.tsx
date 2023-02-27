@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./InfoItem.module.scss";
+import "./InfoItem.scss";
 
 export interface InfoItemProps {
 	icon: React.ReactNode;
@@ -14,11 +14,11 @@ const InfoItem: React.FC<InfoItemProps> = ({ icon, text, isLink }) => {
 		currentHref = text && text.startsWith("http") ? text : `https://${text}`;
 	}
 	return (
-		<div className={`${styles.infoItem}${text ? "" : ` ${styles.empty}`}`}>
+		<div className={`info-item${text ? "" : ` empty`}`}>
 			{icon}
-			<div>
+			<div className="info-item__content">
 				{isLink && text ? (
-					<a href={currentHref} className={styles.link} target="_blank" rel="noreferrer">
+					<a href={currentHref} className="link" target="_blank" rel="noreferrer">
 						{currentText}
 					</a>
 				) : (

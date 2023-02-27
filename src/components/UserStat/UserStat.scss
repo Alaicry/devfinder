@@ -1,4 +1,4 @@
-:global {
+:root {
 	body[data-theme="light"] {
 		--stat-bg: var(--gray-50);
 		--stat-color: var(--gray-300);
@@ -9,7 +9,7 @@
 	}
 }
 
-.userStat {
+.card-stats {
 	background-color: var(--stat-bg);
 	color: var(--stat-color);
 	padding: 15px 32px;
@@ -23,13 +23,13 @@
 	flex-direction: column;
 	gap: 0.5rem;
 
-  &Title {
+  &__title {
     color: var(--gray-200);
     font-size: 0.75rem;
     line-height: 1.5;
   }
 
-  &Number {
+  &__number {
     font-size: 1.25rem;
     line-height: 1.5;
     font-weight: 700;
